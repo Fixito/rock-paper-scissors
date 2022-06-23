@@ -1,11 +1,14 @@
 <?php
 session_start();
+unset($_SESSION["message"]);
 var_dump($_SESSION);
 $tab = ['0', '1', '2'];
 $names = ["Pierre", "Papier", "Ciseaux"];
 $humanGuess = $_POST["human"] ?? '';
 $name = $_GET["name"] ?? '';
 $result = "";
+
+
 
 function check($computer, $human)
 {
@@ -32,6 +35,7 @@ if (!isset($_GET["name"])) {
 
 if (isset($_POST["logout"])) {
   header("Location: index.php");
+  return;
 }
 
 if ($humanGuess || $humanGuess === "0") {
@@ -56,10 +60,10 @@ if ($humanGuess || $humanGuess === "0") {
   <section class="section">
     <div class="title">
       <h2>pierre papier ciseaux</h2>
-      <div class="title-uderline"></div>
+      <div class="title-underline"></div>
     </div>
-    <p>Bienvenue : <?= ucfirst($name) ?></p>
     <form method="POST" class="form">
+      <p class="welcome">Bienvenue : <?= ucfirst($name) ?></p>
       <div class="form-row">
         <select name="human" class="form-input">
           <option value="-1">Sélectionner</option>

@@ -11,10 +11,12 @@ if (isset($_POST["cancel"])) {
   return;
 }
 
+
 if ((isset($name) && strlen($name) > 0) && (isset($password) && strlen($password) > 0)) {
   $md5 = hash('md5', $salt . htmlentities($password));
   if ($md5 === $stored_hash) {
     header("location: game.php?name=" . urlencode($_POST["who"]));
+    return;
   } else {
     $message = "mot de passe incorrect";
   }

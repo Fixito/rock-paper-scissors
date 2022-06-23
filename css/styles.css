@@ -254,7 +254,7 @@ pre {
 
 .section {
   width: 90vw;
-  max-width: var(--fixed-width);
+  max-width: 1170px;
   margin: 0 auto;
 }
 
@@ -272,4 +272,8 @@ pre {
   width: 7rem;
   height: 0.25rem;
   margin: 0 auto;
+}
+
+.welcome {
+  margin-top: 0;
 }
