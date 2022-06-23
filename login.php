@@ -8,6 +8,7 @@ $stored_hash = '1a52e17fa899cf40fb04cfc42e6352f1';
 
 if (isset($_POST["cancel"])) {
   header("Location: ./index.php");
+  return;
 }
 
 if ((isset($name) && strlen($name) > 0) && (isset($password) && strlen($password) > 0)) {
