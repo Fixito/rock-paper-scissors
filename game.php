@@ -1,7 +1,6 @@
 <?php
 session_start();
 unset($_SESSION["message"]);
-var_dump($_SESSION);
 $tab = ['0', '1', '2'];
 $names = ["Pierre", "Papier", "Ciseaux"];
 $humanGuess = $_POST["human"] ?? '';
