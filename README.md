@@ -36,6 +36,10 @@ die("Le paramètre name est manquant");
 
 Pour tester, naviguer vers game.php manuellement sans se connecter - cela devrait échouer avec "Le paramètre name est manquant"
 
+Si le mot de passe entré et la valeur $stored_hash correspondent, l'utilisateur est redirigé vers la page game.php avec le nom d'utilisateur en tant que paramètre GET en utilisant :
+
+header("Location: game.php?name=".urlencode($\_POST['who']));
+
 Si l'utilisateur est connecté, il devrait y avoir un formulaire avec menu déroulant montrant les options Pierre, Papier, Ciseaux ainsi que des boutons "Jouer" et "Se Déconnecter".
 
 Si le bouton "Se Déconnecter" est pressé l'utilisateur est redirigé vers la page index.php en utilisant :
@@ -57,3 +61,11 @@ return "Tu perds";
 return "Tu gagnes";
 ...
 }
+
+## Bonus
+
+Voici quelques améliorations possibles :
+
+- Au lieu d'utiliser une série de if-elseif-else dans la fonction **check()**, essayer de calculer l'aspect gain/défaite du jeu avec un calcul simple d'arithmétique en utilisant le modulo (%)
+
+- Ajouter des images pour rendre l'affichage plus joli.
