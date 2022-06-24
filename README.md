@@ -30,13 +30,13 @@ Le hashage stocké est le MD5 du sel concaténé avec le mot php123 - qui est le
 
 ## Spécifications de l'écran de jeu
 
-Pour empêcher le jeu d'$etre joué sans utilisateur proprement connecté, la page game.php doit première vérifier la session pour voir si le nom de l'utilisateur est défini et si l'utilisateur n'est pas défini alors la session de game.php doit s'arrêter immédiatement en utilisant la fonction die() de PHP :
+Pour empêcher le jeu d'être joué sans utilisateur proprement connecté, la page game.php doit première vérifier la session pour voir si le nom de l'utilisateur est défini et si l'utilisateur n'est pas défini alors la session de game.php doit s'arrêter immédiatement en utilisant la fonction die() de PHP :
 
 die("Le paramètre name est manquant");
 
 Pour tester, naviguer vers game.php manuellement sans se connecter - cela devrait échouer avec "Le paramètre name est manquant"
 
-Si l'utilisateur est connecté, il devrait y avoir unformulaire avec menu déroulant montrant les options Pierre, Papier, Ciseaux ainsi que des boutons "Jouer" et "Se Déconnecter".
+Si l'utilisateur est connecté, il devrait y avoir un formulaire avec menu déroulant montrant les options Pierre, Papier, Ciseaux ainsi que des boutons "Jouer" et "Se Déconnecter".
 
 Si le bouton "Se Déconnecter" est pressé l'utilisateur est redirigé vers la page index.php en utilisant :
 
