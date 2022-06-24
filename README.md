@@ -22,7 +22,7 @@ Vous devez "saler" votre mot de passe. Le mot de passe en "texte plein" ne doit 
 hashage stocké :
 
 $salt = 'XyZzy12\*\_';
-$stored_hash = '1a52e17fa899cf40fb04cfc42e6352f1';
+$stored_hash = 'dddd5970b9fd8de3700b1db3cf7c8b2a';
 
 Le hashage stocké est le MD5 du sel concaténé avec le mot php123 - qui est le mot de passe. Le hashage est calculé avec le PHP suivant :
 
