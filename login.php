@@ -11,7 +11,6 @@ if (isset($_POST["cancel"])) {
   return;
 }
 
-
 if ((isset($name) && strlen($name) > 0) && (isset($password) && strlen($password) > 0)) {
   $md5 = hash('md5', $salt . htmlentities($password));
   if ($md5 === $stored_hash) {
@@ -20,6 +19,8 @@ if ((isset($name) && strlen($name) > 0) && (isset($password) && strlen($password
   } else {
     $message = "mot de passe incorrect";
   }
+  header("Location: ./login.php");
+  return;
 } else {
   $_SESSION["message"] = "le nom d'utilisateur et le mot de passe sont requis";
 }
