@@ -40,7 +40,6 @@ if ((isset($name) && strlen($name) > 0) && (isset($password) && strlen($password
 
 <body>
   <section class="section">
-    <?php ?>
     <form action="./login.php" method="POST" class="form">
       <h4>se connecter</h4>
       <?php
